@@ -5,16 +5,14 @@ import java.util.Scanner;
 public class Calc {
 	public static void main(String[] args) {
 		Scanner sc= new Scanner(System.in);
-		String[] arr = new String[9];
-		arr[0]="+";
-		arr[1]="-";
-		arr[2]="/";
-		arr[3]="%";
-		arr[4]="*";
-		arr[5]="\t 첫번째 숫자를 입력하세요 \n";
-		arr[6]="\t 두번째 숫자를 입력하세요 \n";
-		arr[7]="\t 연산자 (*-+/%)를 입력해 주세요 \n";
-		arr[8]="입력 다시";
+		String[] arr = {
+				"+", "-", "/", "%", "*",
+				"\t 첫번째 숫자를 입력하세요 \n",
+				"\t 두번째 숫자를 입력하세요 \n",
+				"\t 연산자 (*-+/%)를 입력해 주세요 \n",
+				"입력 다시",
+				" %d %s %d = %d "
+				};
 		int num1 = 0, num2 = 0, result = 0;
 		String opcode="";
 		System.out.print(arr[5]);
@@ -38,7 +36,7 @@ public class Calc {
 			System.out.println(arr[8]);
 		}
 		}
-		System.out.printf(" %d %s %d = %d ",
+		System.out.printf(arr[9],
 				num1,opcode,num2,result);
 	}
 }

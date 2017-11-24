@@ -5,11 +5,13 @@ import java.util.Scanner;
 public class CalcSwitch {
 	public static void main(String[] args) {
 		Scanner scan= new Scanner(System.in);
-		String[] arr = new String[4]; // 4 = count
-		arr[0]="첫 숫자 입력";
-		arr[1]="연산자 입력";
-		arr[2]="둘 숫자 입력";
-		arr[3]="사칙연산이 잘못 되었습니다"; // 3 = 정수체계라서 0~3
+		String[] arr = {
+				"첫 숫자 입력",
+				"연산자 입력",
+				"둘 숫자 입력",
+				"사칙연산이 잘못 되었습니다",
+				" %d %s %d = %d "
+		};
 		int num1=0, num2=0, result=0;
 		boolean inputOk=true;
 		String opcode="", str="";
@@ -39,8 +41,7 @@ public class CalcSwitch {
 		if(!inputOk) {
 			str=arr[3];
 		}else {
-//			str=num1+ " " +opcode+ " " +num2 + " = " + result;
-			str=String.format("%d %s %d = %d", num1,opcode,num2,result);
+			str=String.format(arr[4], num1,opcode,num2,result);
 		}
 		System.out.print(str);
 	}

@@ -7,11 +7,12 @@ public class WhoAreYou {
 		Scanner s= new Scanner(System.in);
 		int pay=0;
 		String name="";
-		String[] arr = new String[4];
-		arr[0]="이름이 뭐죠";
-		arr[1]="당신 이름은 %s 입니다\n";
-		arr[2]="이 빵 가격은 얼마죠";
-		arr[3]="가격은 %d원 입니다";
+		String[] arr = {
+				"이름이 뭐죠",
+				"당신 이름은 %s 입니다\n",
+				"이 빵 가격은 얼마죠",
+				"가격은 %d원 입니다"
+		};
 		System.out.println(arr[0]);
 		name = s.next();
 		System.out.printf(arr[1], name);
